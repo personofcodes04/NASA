@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Astro Mining Initiative</title>
+    <meta name="description" content="Orbital resource extraction & deep space colonization initiative" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="logo-dot"></span>
+          <span class="brand-title">ASTRO MINING</span>
+        </div>
+        <nav class="nav">
+          <a href="#infrastructure">Infrastructure</a>
+          <a href="#debris">Debris Cleanup</a>
+          <a href="#phases">Mission Phases</a>
+          <a href="#impact">Environmental Impact</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="hero container reveal">
+        <h1>Orbital Resource Extraction & Deep Space Colonization Initiative</h1>
+        <p>
+          A revolutionary six‑phase program to establish orbital mass driver stations for asteroid mining,
+          space debris recycling, and sustainable off‑world resource production for future colonization.
+        </p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#phases">Explore Mission Phases</a>
+          <a class="btn ghost" href="#impact">Environmental Impact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Orbital Infrastructure -->
+      <section id="infrastructure" class="section reveal">
+        <div class="container">
+          <h2>Orbital Infrastructure</h2>
+          <p class="section-sub">
+            Real‑time visualization of Genesis station network in Earth's orbital environment
+          </p>
+          <div class="infra-grid">
+            <div class="orbital-viewport card">
+              <div class="card-head">
+                <span>Real 3D Orbital Systems</span>
+                <div class="chip">3D</div>
+              </div>
+              <div class="viewport">
+                <canvas id="space-canvas" aria-label="3D orbital visualization placeholder"></canvas>
+                <div class="viewport-overlay">Drag to rotate • Scroll to zoom</div>
+              </div>
+            </div>
+            <aside class="station-panel card">
+              <div class="card-head">
+                <span>Genesis‑S</span>
+                <div class="status on">ONLINE</div>
+              </div>
+              <div class="station-stats">
+                <div class="stat"><span>Crew</span><strong>0</strong></div>
+                <div class="stat"><span>Active Experiments</span><strong>0</strong></div>
+                <div class="stat"><span>Orbital Velocity</span><strong>7.66 km/s</strong></div>
+                <div class="stat"><span>Altitude</span><strong>450 km</strong></div>
+                <div class="stat"><span>Uptime</span><strong>99.7%</strong></div>
+                <div class="stat"><span>Power</span><strong>2.4 MW</strong></div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Debris Cleanup -->
+      <section id="debris" class="section alt reveal">
+        <div class="container">
+          <h2>Space Debris Cleanup Progress</h2>
+          <p class="section-sub">
+            Real‑time monitoring of orbital debris reduction and environmental restoration
+          </p>
+          <div class="stats-grid">
+            <div class="card kpi">
+              <span class="kpi-label">Orbital Debris Status</span>
+              <div class="kpi-value"><span id="debrisRemaining">28,511</span><small> pieces</small></div>
+              <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="16">
+                <span data-target="16" style="width:0%"></span>
+              </div>
+            </div>
+            <div class="card kpi">
+              <span class="kpi-label">Today's Progress</span>
+              <div class="kpi-value ok">180</div>
+              <small>pieces cleared</small>
+            </div>
+            <div class="card kpi">
+              <span class="kpi-label">Completion Timeline</span>
+              <div class="kpi-value">2045</div>
+              <small>projected clear date</small>
+            </div>
+          </div>
+          <div class="impact-grid">
+            <div class="mini-kpi card"><strong>2.3M tons</strong><span>CO₂ reduction/year</span></div>
+            <div class="mini-kpi card"><strong>45.7%</strong><span>Earth resources saved</span></div>
+            <div class="mini-kpi card"><strong>24/7</strong><span>Continuous operations</span></div>
+            <div class="mini-kpi card"><strong>15</strong><span>Avg. daily clear rate</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission Phases -->
+      <section id="phases" class="section reveal">
+        <div class="container">
+          <h2>Mission Phases</h2>
+          <p class="section-sub">
+            Six strategic phases to establish humanity's first comprehensive off‑world resource extraction and colonization infrastructure
+          </p>
+
+          <div class="tabs">
+            <button class="tab active" data-tab="p1">Phase 1</button>
+            <button class="tab" data-tab="p2">Phase 2</button>
+            <button class="tab" data-tab="p3">Phase 3</button>
+            <button class="tab" data-tab="p4">Phase 4</button>
+            <button class="tab" data-tab="p5">Phase 5</button>
+            <button class="tab" data-tab="p6">Phase 6</button>
+          </div>
+
+          <div class="tab-panels">
+            <!-- Phase 1 -->
+            <div id="p1" class="panel active">
+              <div class="panel-grid">
+                <div class="card">
+                  <div class="card-head"><span>Phase 1: Technology Demonstration (2027–2030) – 3.5 Years</span></div>
+                  <p><strong>Station:</strong> Orbital Testbed‑1 (OT‑1)</p>
+                  <p><strong>Primary Mission:</strong> Validate core technologies in an operational space environment before scaling.</p>
+                  <ul class="bullet">
+                    <li><strong>Mass Driver Experiments:</strong> Three prototype electromagnetic launchers (coilgun, railgun, rotating‑tether hybrid); 100‑gram payloads at 100 m/s; EMI shielding, thermal management, and precision targeting tests.</li>
+                    <li><strong>Debris Collection:</strong> Two robotic janitors with nets, harpoons, and robotic arms; target 3–5 defunct satellites per year in similar orbits.</li>
+                    <li><strong>Material Processing:</strong> 2 kW furnace smelting aluminum and steel in microgravity; process debris into ingots with ≥85% purity.</li>
+                    <li><strong>Satellite Servicing:</strong> 2–3 refuel/repair missions per year; replace batteries, deploy stuck solar panels, refuel hydrazine.</li>
+                    <li><strong>Operations Focus (added):</strong> Station 1 recycles orbital debris and uses produced materials to provide satellite maintenance. It conducts mass‑driver tests and routinely launches small probes toward the Moon and nearby asteroids.</li>
+                  </ul>
+                  <details>
+                    <summary>Technical Specs, Investment, Revenues, Risks</summary>
+                    <ul class="kv">
+                      <li><span>Module length</span><strong>12 m</strong></li>
+                      <li><span>Mass</span><strong>18 tons</strong></li>
+                      <li><span>Power</span><strong>25 kW solar</strong></li>
+                      <li><span>Crew</span><strong>Uncrewed</strong></li>
+                      <li><span>Orbit</span><strong>450 km</strong></li>
+                    </ul>
+                    <p><strong>Investment:</strong> $280M (Launch $65M, Hardware $140M, Operations $45M, Contingency $30M)</p>
+                    <p><strong>Revenue:</strong> Satellite life extension $120–160M; debris removal demos $40M; <em>Total ~$180M</em>. Net loss ≈ $100M (expected).</p>
+                    <p><strong>Benefits:</strong> Remove 12–17 large debris objects; extend 8 satellites; validate recycling (15–25% future cost reduction); 15+ papers.</p>
+                    <p><strong>Risks:</strong> EMI with station systems; debris capture harder than simulated; funding gaps.</p>
+                  </details>
+                </div>
+                <div class="card metrics">
+                  <div class="metric"><span>Timeline</span><strong>2027–2030</strong></div>
+                  <div class="metric"><span>Investment Required</span><strong>$280M</strong></div>
+                  <div class="metric"><span>Revenue Potential</span><strong>~$180M</strong></div>
+                  <div class="metric"><span>Humanity Benefits</span><strong>Debris cleanup & servicing</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div id="p2" class="panel">
+              <div class="panel-grid">
+                <div class="card">
+                  <div class="card-head"><span>Phase 2: Pilot Manufacturing Facility (2030–2034) – 4 Years</span></div>
+                  <p><strong>Station:</strong> LEO Manufacturing Platform Alpha (LMP‑Alpha)</p>
+                  <p><strong>Primary Mission:</strong> Establish profitable space manufacturing and scale mass driver technology.</p>
+                  <ul class="bullet">
+                    <li><strong>Manufacturing:</strong> 3D‑print components from recycled aluminum; premium optical fiber; protein and semiconductor crystals; produce 2–3 small satellites/year from recycled materials.</li>
+                    <li><strong>Mass Driver Scale‑Up:</strong> Operational 10 m launcher; 5 kg at 500 m/s; fire rate 1/hr; target small NEO fragments.</li>
+                    <li><strong>Asteroid Prospecting:</strong> Launch 6 CubeSat prospectors; characterize 15–20 NEAs via spectroscopy and mapping.</li>
+                    <li><strong>Debris Processing:</strong> Process 80–120 tons/year into feedstock (Al 45%, Ti 8%, Cu 12%, steel 25%).</li>
+                    <li><strong>Operational Emphasis (added):</strong> Station 2 scales to higher‑mass launches and increases production capacity. It represents a key step toward building future stations in space, with many parts manufactured from recycled orbital debris.</li>
+                  </ul>
+                  <details>
+                    <summary>Technical Specs, Investment, Revenues, Milestones</summary>
+                    <ul class="kv">
+                      <li><span>Length</span><strong>45 m (3 modules)</strong></li>
+                      <li><span>Mass</span><strong>72 tons</strong></li>
+                      <li><span>Power</span><strong>120 kW</strong></li>
+                      <li><span>Crew</span><strong>2–4 rotating</strong></li>
+                    </ul>
+                    <p><strong>Investment:</strong> $890M (modules $320M, mass driver $180M, equipment $140M, probes $85M, launch $95M, ops $70M)</p>
+                    <p><strong>Revenue:</strong> Optical fiber $240M; pharma crystals $160M; satellites $200M; servicing $120M; grants $80M; <em>Total ~$800M</em>. Net loss ≈ $90M (cumulative −$190M).</p>
+                    <p><strong>Benefits:</strong> Remove 350–480 tons debris; improve internet infrastructure; life‑saving medications; 85 high‑skill jobs; 30% satellite cost reduction.</p>
+                    <p><strong>Milestones:</strong> M8 first recycled part; M18 1 kg payload; M24 first prospector at asteroid; M36 first complete satellite.</p>
+                  </details>
+                </div>
+                <div class="card metrics">
+                  <div class="metric"><span>Timeline</span><strong>2030–2034</strong></div>
+                  <div class="metric"><span>Investment Required</span><strong>$890M</strong></div>
+                  <div class="metric"><span>Total Revenue</span><strong>~$800M</strong></div>
+                  <div class="metric"><span>Net Loss</span><strong>~$90M</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div id="p3" class="panel">
+              <div class="panel-grid">
+                <div class="card">
+                  <div class="card-head"><span>Phase 3: Commercial Asteroid Mining (2034–2040) – 6 Years</span></div>
+                  <p><strong>Station:</strong> Artemis Resource Extraction Hub</p>
+                  <p><strong>Primary Mission:</strong> Begin economically viable asteroid mining and stockpile resources for deep space missions.</p>
+                  <ul class="bullet">
+                    <li><strong>Robotic Mining Fleet:</strong> 8 autonomous spacecraft; 3‑year life; target mostly C‑type and some M‑type; surface excavation; return via mass driver capsules.</li>
+                    <li><strong>Advanced Mass Driver:</strong> 50 m track; 150 kg at 3 km/s; ±0.1° targeting; dual‑use for returns and cislunar logistics.</li>
+                    <li><strong>Resource Processing:</strong> Water 180–240 t/yr; PGM 15–25 kg/yr; rare earths 200–400 kg/yr; bulk metals 800 t/yr.</li>
+                    <li><strong>Colonization Support:</strong> Manufacture 12 lunar habitat modules; stockpile 50 t water in orbital depot; 95% life‑support recycling tests.</li>
+                    <li><strong>Program Focus (added):</strong> With maturing mass‑driver experiments, truly heavy probes are launched. Nearby asteroids are gently redirected and processed to supply raw materials that boost Station 2’s manufacturing output.</li>
+                    <li><strong>Asteroid Capture Strategy (added):</strong> Robot probes impact and secure a safe fragment, then use ion thrusters to bring it to LEO. As the fragment approaches the collection station, a secondary drone intercepts to slow it for a controlled, safe capture by the station.</li>
+                  </ul>
+                  <details>
+                    <summary>Specs, Investment, Revenues, Milestones</summary>
+                    <ul class="kv">
+                      <li><span>Configuration</span><strong>Hub‑and‑spoke, 180 m</strong></li>
+                      <li><span>Mass</span><strong>420 tons</strong></li>
+                      <li><span>Power</span><strong>800 kW (solar + 200 kW fission)</strong></li>
+                      <li><span>Crew</span><strong>12 + 6 rotating</strong></li>
+                    </ul>
+                    <p><strong>Investment:</strong> $3.7B (probes $1.4B, expansion $980M, mass driver $420M, reactor $380M, refinery $290M, ops $230M)</p>
+                    <p><strong>Revenue:</strong> PGM $1.08B; fuel/water $6.25B; rare earths $540M; habitats $480M; services $400M; <em>Total ~$8.75B</em>. Profit ≈ $5.05B (cumulative +$4.86B).</p>
+                    <p><strong>Milestones:</strong> M10 first probe arrival; M22 first water returned; M38 reactor full power; M52 first PGM shipment; M68 launch 150 kg to Mars transfer.</p>
+                  </details>
+                </div>
+                <div class="card metrics">
+                  <div class="metric"><span>Timeline</span><strong>2034–2040</strong></div>
+                  <div class="metric"><span>Investment Required</span><strong>$3.7B</strong></div>
+                  <div class="metric"><span>Total Revenue</span><strong>~$8.75B</strong></div>
+                  <div class="metric"><span>Phase Profit</span><strong>~$5.05B</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 4 -->
+            <div id="p4" class="panel">
+              <div class="panel-grid">
+                <div class="card">
+                  <div class="card-head"><span>Phase 4: Deep Space Logistics Network (2040–2047) – 7 Years</span></div>
+                  <p><strong>Station:</strong> Gateway Logistics Network (GLN‑Prime)</p>
+                  <p><strong>Primary Mission:</strong> Become the central hub for cislunar and Mars‑bound logistics, minimizing Earth launches.</p>
+                  <ul class="bullet">
+                    <li><strong>Interplanetary Supply Chain:</strong> Propellant depot 800–1200 t/yr; contracts with Artemis and private programs; mass driver shipments to Moon and Mars; lunar L1 waystation.</li>
+                    <li><strong>Heavy Manufacturing:</strong> 20 m tanks, 50 m trusses, solar arrays, ion and nuclear thermal engines; 4–6 transfer vehicles/year.</li>
+                    <li><strong>Expanded Mining:</strong> 24 probes; larger M‑type targets; experimental asteroid redirection and shepherding.</li>
+                    <li><strong>Mass Driver Array:</strong> Four tracks; 800 kg at 5 km/s; weekly lunar, monthly Mars launches; lunar catcher system.</li>
+                    <li><strong>Strategic Direction (added):</strong> Target more distant, higher‑grade asteroids and minimize Earth‑based space manufacturing.</li>
+                  </ul>
+                  <details>
+                    <summary>Specs, Investment, Revenues, Milestones</summary>
+                    <ul class="kv">
+                      <li><span>Network</span><strong>GLN‑Prime + GLN‑Luna (L1)</strong></li>
+                      <li><span>Mass</span><strong>2,400 tons</strong></li>
+                      <li><span>Power</span><strong>4.5 MW (3×1.5 MW)</strong></li>
+                      <li><span>Crew</span><strong>60 + 25 rotating</strong></li>
+                    </ul>
+                    <p><strong>Investment:</strong> $8.9B</p>
+                    <p><strong>Revenue:</strong> ~$23.75B (propellant, manufacturing, materials, launch services, tourism, licensing). Phase profit ≈ $14.85B; cumulative ≈ $19.71B.</p>
+                    <p><strong>Benefits:</strong> Permanent lunar base; first crewed Mars mission; 18,000 t asteroid material; 340 space jobs; 92% Mars cost reduction; 40% food self‑sufficiency.</p>
+                  </details>
+                </div>
+                <div class="card metrics">
+                  <div class="metric"><span>Timeline</span><strong>2040–2047</strong></div>
+                  <div class="metric"><span>Investment Required</span><strong>$8.9B</strong></div>
+                  <div class="metric"><span>Total Revenue</span><strong>~$23.75B</strong></div>
+                  <div class="metric"><span>Phase Profit</span><strong>~$14.85B</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 5 -->
+            <div id="p5" class="panel">
+              <div class="panel-grid">
+                <div class="card">
+                  <div class="card-head"><span>Phase 5: Autonomous Shipyard & Industrial Complex (2047–2056) – 9 Years</span></div>
+                  <p><strong>Station:</strong> Prometheus Orbital Manufacturing Collective (POMC)</p>
+                  <p><strong>Primary Mission:</strong> Construct interplanetary spacecraft entirely from space‑sourced materials.</p>
+                  <ul class="bullet">
+                    <li><strong>Spacecraft Construction:</strong> 3–5 vessels/year, 1000–3000 t; nuclear thermal propulsion; rotating habs; closed‑loop life support.</li>
+                    <li><strong>Mega‑Structures:</strong> Begin 5 km Stanford torus; solar power satellite components (200 MW pilot).</li>
+                    <li><strong>Advanced Materials:</strong> Microgravity metallurgy, ultra‑pure silicon, graphene, biomaterials.</li>
+                    <li><strong>Autonomous Mining:</strong> 50+ robots; AI prospecting; mothership processors; pilot water mining at Psyche.</li>
+                    <li><strong>Colonization Step (added):</strong> Asteroid mining reaches sufficient scale and colonization begins. Mass drivers routinely launch to the Moon and Mars so crews can depart Earth with minimal mass.</li>
+                  </ul>
+                  <details>
+                    <summary>Specs, Investment, Revenues, Milestones</summary>
+                    <ul class="kv">
+                      <li><span>Network</span><strong>LEO primary, L1 lunar, L5 yard</strong></li>
+                      <li><span>Mass</span><strong>12,000 tons</strong></li>
+                      <li><span>Power</span><strong>28 MW</strong></li>
+                      <li><span>Crew</span><strong>180 + 70 rotating</strong></li>
+                    </ul>
+                    <p><strong>Investment:</strong> $16.2B</p>
+                    <p><strong>Revenue:</strong> ~$58B (ships, materials, licensing, SBSP, research, real estate). Phase profit ≈ $41.8B; cumulative ≈ $61.51B.</p>
+                    <p><strong>Societal Impact:</strong> Tourism growth; first space university; 12,000 global space workforce; platinum price drops 60%.</p>
+                  </details>
+                </div>
+                <div class="card metrics">
+                  <div class="metric"><span>Timeline</span><strong>2047–2056</strong></div>
+                  <div class="metric"><span>Investment Required</span><strong>$16.2B</strong></div>
+                  <div class="metric"><span>Total Revenue</span><strong>~$58B</strong></div>
+                  <div class="metric"><span>Phase Profit</span><strong>~$41.8B</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 6 -->
+            <div id="p6" class="panel">
+              <div class="panel-grid">
+                <div class="card">
+                  <div class="card-head"><span>Phase 6: Solar System Infrastructure Federation (2056–2070) – 14 Years</span></div>
+                  <p><strong>Station:</strong> Sol Industrial Federation Network (SIFN)</p>
+                  <p><strong>Primary Mission:</strong> Establish self‑sustaining industrial ecosystems across the Solar System; Earth transitions to coordination role.</p>
+                  <ul class="bullet">
+                    <li><strong>Multi‑Body Network:</strong> LEO hub admin & R&D; lunar industry (He‑3, Ti, REE); Mars orbit & surface complexes; belt outposts; Venus aerostat lab; Mercury solar farm.</li>
+                    <li><strong>Mass Driver Network:</strong> 18 drivers creating an interplanetary highway; LEO→Luna cargo in 2 days; LEO→Mars in 3 months; power beaming experiments.</li>
+                    <li><strong>Mega‑Structures:</strong> Stanford torus complete (10k residents); start O'Neill Cylinder; 12 SBSP satellites (12 GW).</li>
+                    <li><strong>Economic Transformation:</strong> 90% of spacecraft never touch Earth; space GDP $400B/yr; new industries flourish.</li>
+                    <li><strong>Ops Evolution (added):</strong> A continuously operating, more advanced 6th‑generation station comes online and gradually retires the first two stations while manufacturing next‑generation facilities.</li>
+                  </ul>
+                  <details>
+                    <summary>Specs, Investment, Revenues, Milestones, End State</summary>
+                    <ul class="kv">
+                      <li><span>Infrastructure</span><strong>35 stations/bases</strong></li>
+                      <li><span>Total Mass</span><strong>180,000 tons</strong></li>
+                      <li><span>Residents</span><strong>12,000 space + 18,000 Moon/Mars</strong></li>
+                      <li><span>Power</span><strong>285 MW</strong></li>
+                    </ul>
+                    <p><strong>Investment:</strong> $78B over 14 years (60% self‑funded; external $31B).</p>
+                    <p><strong>Revenue:</strong> ~$526B across materials, spacecraft, SBSP, tourism, real estate, licensing, research, and shipping. Phase profit ≈ $448B; cumulative ≈ $509.51B.</p>
+                    <p><strong>Humanity Benefits:</strong> Multi‑planetary civilization; clean energy for 8M homes; 40% reduction in Earth mining impact; outer solar system exploration.</p>
+                    <p><strong>End State Vision:</strong> Earth becomes the protected old world; humanity truly spacefaring, with foundations for missions to Jupiter's moons, Saturn, and beyond.</p>
+                  </details>
+                </div>
+                <div class="card metrics">
+                  <div class="metric"><span>Timeline</span><strong>2056–2070</strong></div>
+                  <div class="metric"><span>Investment Required</span><strong>$78B</strong></div>
+                  <div class="metric"><span>Total Revenue</span><strong>~$526B</strong></div>
+                  <div class="metric"><span>Phase Profit</span><strong>~$448B</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Environmental Impact -->
+      <section id="impact" class="section alt reveal">
+        <div class="container">
+          <h2>Environmental Impact</h2>
+          <p class="section-sub">Transforming humanity's relationship with Earth through sustainable off‑world resource extraction</p>
+          <div class="impact-cards">
+            <div class="impact card">
+              <div class="impact-bar"><span data-target="78" style="width:0%"></span></div>
+              <h4>Launch Reduction</h4>
+              <p>78% fewer Earth‑to‑orbit launches for manufacturing.</p>
+            </div>
+            <div class="impact card">
+              <div class="impact-bar"><span data-target="64" style="width:0%"></span></div>
+              <h4>CO₂ Reduction</h4>
+              <p>12.7M tons/year reduction enabled by in‑space industry.</p>
+            </div>
+            <div class="impact card">
+              <div class="impact-bar"><span data-target="72" style="width:0%"></span></div>
+              <h4>Materials Saved</h4>
+              <p>156M tons/year preserved through recycling and asteroid mining.</p>
+            </div>
+            <div class="impact card">
+              <div class="impact-bar"><span data-target="82" style="width:0%"></span></div>
+              <h4>Water Conservation</h4>
+              <p>2.8B liters/year saved via in‑space water processing.</p>
+            </div>
+          </div>
+          <div class="benefits card">
+            <div class="card-head"><span>Launch Reduction Impact Analysis</span></div>
+            <div class="benefit-grid">
+              <ul>
+                <li><strong>2028–2035:</strong> 15% reduction</li>
+                <li><strong>2035–2045:</strong> 45% reduction</li>
+                <li><strong>2045–2055:</strong> 75% reduction</li>
+              </ul>
+              <ul>
+                <li>Eliminate destructive Earth mining operations</li>
+                <li>Preserve ecosystems and biodiversity</li>
+                <li>Reduce carbon footprint of space operations</li>
+                <li>Create sustainable off‑world economy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-grid">
+        <div class="foot-brand">
+          <h3>Astro Mining</h3>
+          <p>Pioneering humanity's expansion into space through sustainable asteroid mining, orbital manufacturing, and comprehensive off‑world resource utilization.</p>
+          <div class="foot-links">
+            <a class="btn small" href="#">View on GitHub</a>
+            <a class="btn small ghost" href="#">NASA Space Apps</a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h4>Mission Overview</h4>
+          <ul>
+            <li>Total Phases: 6</li>
+            <li>Mission Duration: 35+ years</li>
+            <li>Resource Independence: 85%+</li>
+            <li>Humanity Benefit: Multi‑planetary</li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>Connect & Contribute</h4>
+          <ul>
+            <li>Project Inquiry: <a href="mailto:aim@highspace.org">aim@highspace.org</a></li>
+            <li>Open Source: <a href="#">github.com/astro‑mining</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container foot-bottom">
+        <small>© 2025 Astro Mining Initiative</small>
+        <nav class="foot-nav">
+          <a href="#phases">Mission Details</a>
+          <a href="#impact">Environmental Impact</a>
+          <a href="#phases">Phase Timeline</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
+  </body>
+  </html>
+
+
